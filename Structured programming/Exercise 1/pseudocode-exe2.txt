@@ -1,0 +1,50 @@
+ΑΛΓΟΡΙΘΜΟΣ Exercise2
+	ΔΕΔΟΜΕΝΑ
+	  num, x1, x2, x3, x4, x5 : INTEGER;
+	  sum, prod : INTEGER;
+	  MO : REAL;
+	  remN, quoN : INTEGER;
+	  
+	ΑΡΧΗ
+	  num := 2 ;
+	  ΔΙΑΒΑΣΕ(x1,x2,x3,x4,x5);
+	  sum := x1 + x2 + x3 + x4 + x5;
+	  prod := x1*x2*x3*x4*x5;
+	  MO := (x1+x2+x3+x4+x5)/5;
+
+	  ΤΥΠΩΣΕ "To athroisma twn arithmwn x1, x2, x3, x4, x5 einai:";
+	  ΤΥΠΩΣΕ x1,x2,x3,x4,x5,sum;
+	  ΤΥΠΩΣΕ "To ginomeno twn arithmwn x1, x2, x3, x4, x5 einai:";
+	  ΤΥΠΩΣΕ x1,x2,x3,x4,x5,prod;
+	  ΤΥΠΩΣΕ "O mesos oros twn arithmwn x1, x2, x3, x4, x5 einai:";
+	  ΤΥΠΩΣΕ x1,x2,x3,x4,x5,MO;
+	  
+	  quoN := x1/num;
+	  remN := x1%num;
+	  ΤΥΠΩΣΕ "To phliko kai to ypoloipo ths diaireshs toy x1 me ton num einai:";
+	  ΤΥΠΩΣΕ x1,num,quoN,remN;
+	  
+	  quoN := x2/num;
+	  remN := x2%num;
+	  ΤΥΠΩΣΕ "To phliko kai to ypoloipo ths diaireshs toy x2 me ton num einai:";
+	  ΤΥΠΩΣΕ x2,num,quoN,remN;
+
+	  quoN := x3/num;
+	  remN := x3%num;
+	  ΤΥΠΩΣΕ "To phliko kai to ypoloipo ths diaireshs toy x3 me ton num einai:";
+	  ΤΥΠΩΣΕ x3,num,quoN,remN;
+
+	  quoN := x4/num;
+	  remN := x4%num;
+	  ΤΥΠΩΣΕ "To phliko kai to ypoloipo ths diaireshs toy x4 me ton num einai:";
+	  ΤΥΠΩΣΕ x4,num,quoN,remN;
+
+	  quoN := x5/num;
+	  remN := x5%num;
+	  ΤΥΠΩΣΕ "To phliko kai to ypoloipo ths diaireshs toy x5 me ton num einai:";
+	  ΤΥΠΩΣΕ x5,num,quoN,remN;
+
+	ΤΕΛΟΣ
+
+
+
