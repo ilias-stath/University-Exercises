@@ -1,0 +1,37 @@
+Name     BCD--2017 ;
+PartNo   00 ;
+Date     13/12/2021 ;
+Revision 01 ;
+Designer Engineer ;
+Company  TEI ;
+Assembly None ;
+Location  ;
+Device   g20v8a ;
+
+/* *************** INPUT PINS *********************/
+PIN   2  =  C4                      ; /*                                 */ 
+PIN   3  =  S3                      ; /*                                 */ 
+PIN   4  =  S2                      ; /*                                 */ 
+PIN   5  =  S1                      ; /*                                 */ 
+PIN   6  =  S0                      ; /*                                 */ 
+
+/* *************** OUTPUT PINS *********************/
+PIN   22  = A                        ; /*                                 */ 
+PIN   21  = B                        ; /*                                 */ 
+PIN   20  = C                        ; /*                                 */ 
+PIN   19  = D                        ; /*                                 */ 
+PIN   18  = E                        ; /*                                 */ 
+PIN   17  = F                        ; /*                                 */ 
+PIN   16  = G                        ; /*                                 */ 
+PIN   15  = H                        ; /*                                 */ 
+
+
+
+A = (!C4 & !S3 & !S2 & !S1 & S0) # (!S3 & S2 & !S1 & !S0) # (S3 & !S2 & S1 & S0) # (S3 & S2 & S1 & !S0);
+B = (!S3 & S2 & !S1 & S0) # (!S3 & S2 & S1 & !S0) # (S3 & S2 & S1 & S0) # (C4 & !S1 & !S0);
+C = (!C4 & !S3 & !S2 & S1 & !S0) # (S3 & S2 & !S1 & !S0);
+D = (!S2 & !S1 & S0) # (!S3 & S2 & !S1 & !S0) # (!S3 & S2 & S1 & S0) # (S3 & !S2 & S0) # (S3 & S2 & S1 & !S0);
+E = (S0) # (!S3 & S2 & !S1) # (S3 & S2 & S1);
+F = (!S3 & !S2 & S0) # (!C4 & !S3 & !S2 & S1) # (!S3 & S1 & S0) # (!S2 & S1 & S0) # (S3 & S2 & !S1);
+G = (!C4 & !S3 & !S2 & !S1) # (!S3 & S2 & S1 & S0) # (S3 & !S2 & S1) # (C4 & S0);
+H = (!C4 & !S3) # (!C4 & !S2 & !S1);
