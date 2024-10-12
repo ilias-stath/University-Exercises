@@ -1,0 +1,128 @@
+ΑΛΓΟΡΙΘΜΟΣ SUPERMARKET_DATABASE
+
+ΣΤΑΘΕΡΕΣ
+	Ν = 3 ;
+	Μ = 4 ;
+	K = 20 ;
+
+ΔΕΔΟΜΕΝΑ
+	i,j,x,y : INTEGER ;
+	p : REAL ;
+	sM: ARRAY[1..M,1..K] OF CHARACTER;
+	pP: ARRAY[1..M,1..N] OF REAL; 
+
+ΑΡΧΗ
+	sM[0] := "Sklavenitis";
+	sM[1] := "My Market";
+	sM[2] := "Vasilopoulos";
+	sM[3] := "Lidl";
+
+	pP[0][0] := 2.5;
+	pP[0][1] := 3.8;
+	pP[0][2] := 4.6;
+	pP[1][0] := 2.6;
+	pP[1][1] := 3.1;
+	pP[1][2] := 4.9;
+	pP[2][0] := 2;
+	pP[2][1] := 4;
+	pP[2][2] := 5.5;
+	pP[3][0] := 3;
+	pP[3][1] := 2.9;
+	pP[3][2] := 5.2;
+	
+	ΤΥΠΩΣΕ "Type a price.";
+	ΔΙΑΒΑΣΕ(p);
+	ΓΙΑ i=1 ΕΩΣ M
+	ΕΠΑΝΕΛΑΒΕ
+		x := 0;
+		ΓΙΑ j=1 ΕΩΣ Ν
+		ΕΠΑΝΕΛΑΒΕ
+			ΕΑΝ (pP[i-1][j-1] == p) ΤΟΤΕ
+				x := x + 1;
+			ΑΛΛΙΩΣ
+				ΣΥΝΕΧΙΣΕ;
+			ΕΑΝ-ΤΕΛΟΣ
+		ΓΙΑ-ΤΕΛΟΣ
+		ΤΥΠΩΣΕ "The ";
+		ΤΥΠΩΣΕ sM[i-1];
+		ΤΥΠΩΣΕ " Supermarket has: ";
+		ΤΥΠΩΣΕ x;
+		ΤΥΠΩΣΕ " product/products at that price.";
+	ΓΙΑ-ΤΕΛΟΣ
+
+	ΤΥΠΩΣΕ "Type a second price.";
+	ΔΙΑΒΑΣΕ (p);
+	y := 0;
+	ΓΙΑ i=1 ΕΩΣ M
+	ΕΠΑΝΕΛΑΒΕ
+		x := 0;
+		ΓΙΑ j=1 ΕΩΣ N
+		ΕΠΑΝΕΛΑΒΕ
+			ΕΑΝ (pP[i-1][j-1] < p) ΤΟΤΕ
+				x := x +1;
+			ΑΛΛΙΩΣ 
+				ΣΥΝΕΧΙΣΕ;
+			ΕΑΝ-ΤΕΛΟΣ
+		ΓΙΑ-ΤΕΛΟΣ
+		ΕΑΝ (x == N) ΤΟΤΕ
+			ΤΥΠΩΣΕ "The "; 
+			ΤΥΠΩΣΕ sM[i-1];
+			ΤΥΠΩΣΕ " Supermarket has its product prices below that price.";
+		ΑΛΛΙΩΣ
+			y := y + 1;
+		ΕΑΝ-ΤΕΛΟΣ
+
+		ΕΑΝ (y == N) ΤΟΤΕ
+			ΤΥΠΩΣΕ "No Supermarket has its product prices below that price.";
+		ΑΛΛΙΩΣ
+			ΣΥΝΕΧΙΣΕ;
+		ΕΑΝ-ΤΕΛΟΣ
+	ΓΙΑ-ΤΕΛΟΣ
+	
+	x := 0;
+	p := 0;
+	y := 0;
+	ΤΥΠΩΣΕ "Select a product by typing 1,2 or 3.";
+	ΔΙΑΒΑΣΕ(y);
+	ΕΠΑΝΕΛΑΒΕ
+		ΕΑΝ (y == 1 || y == 2 || y == 3) ΤΟΤΕ
+			ΓΙΑ i=1 ΕΩΣ M
+			ΕΠΑΝΕΛΑΒΕ
+				ΕΑΝ (i == 0) ΤΟΤΕ
+					p := pP[i-1][y-1];
+					x := i-1;
+				ΑΛΛΙΩΣ
+					ΕΑΝ (pP[i-1][y-1] < p) ΤΟΤΕ
+						p := pP[i-1][y-1];
+						x := i-1;
+					ΑΛΛΙΩΣ
+						ΣΥΝΕΧΙΣΕ;
+					ΕΑΝ-ΤΕΛΟΣ
+				ΕΑΝ-ΤΕΛΟΣ
+			ΓΙΑ-ΤΕΛΟΣ
+		ΑΛΛΙΩΣ
+			ΤΥΠΩΣΕ "Error. You must type 1,2 or 3.";
+			ΔΙΑΒΑΣΕ(y);
+		ΕΑΝ-ΤΕΛΟΣ
+	ΜΕΧΡΙ((y != 1 && y != 2 && y != 3)
+
+	ΤΥΠΩΣΕ "The Supermarket that offers the product number ";
+	ΤΥΠΩΣΕ y;
+	ΤΥΠΩΣΕ " in the lowest price is ";
+	ΤΥΠΩΣΕ sM[x];
+	ΤΥΠΩΣΕ " with the price being at ";
+	ΤΥΠΩΣΕ p;
+	ΤΥΠΩΣΕ "euros.";
+
+ΤΕΛΟΣ
+
+
+
+
+
+
+
+
+
+
+
