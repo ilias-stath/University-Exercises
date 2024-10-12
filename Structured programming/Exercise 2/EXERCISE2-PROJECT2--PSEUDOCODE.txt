@@ -1,0 +1,50 @@
+ΑΛΓΟΡΙΘΜΟΣ COMPANY
+	
+	ΔΕΔΟΜΕΝΑ
+	     sec : CHARACTER ;
+	     owh : INTEGER ;
+
+	ΑΡΧΗ
+	     ΤΥΠΩΣΕ " Enter your sector. " ;
+	     ΔΙΑΒΑΣΕ(sec);
+	     ΤΥΠΩΣΕ " Enter your overtime work hours. ";
+	     ΔΙΑΒΑΣΕ(owh);
+
+	     ΕΑΝ (sec == 'Α') ΤΟΤΕ
+		ΕΑΝ (owh >= 20) ΤΟΤΕ
+		    ΤΥΠΩΣΕ " Your bonus is 200 euros.";
+		ΑΛΛΙΩΣ ΕΑΝ (owh > 0) ΤΟΤΕ
+		    ΤΥΠΩΣΕ " Your bonus is 100 euros.";
+		ΑΛΛΙΩΣ 
+		    ΤΥΠΩΣΕ " Your bonus is 0 euros.";
+
+		ΕΑΝ-ΤΕΛΟΣ
+
+
+	     ΑΛΛΙΩΣ ΕΑΝ (sec == 'B') ΤΟΤΕ
+		ΕΑΝ (owh >= 10) ΤΟΤΕ
+		    ΤΥΠΩΣΕ " Your bonus is 250 euros.";
+		ΑΛΛΙΩΣ ΕΑΝ (owh > 0) ΤΟΤΕ
+		    ΤΥΠΩΣΕ " Your bonus is 150 euros.";
+		ΑΛΛΙΩΣ 
+		    ΤΥΠΩΣΕ " Your bonus is 0 euros.";
+
+		ΕΑΝ-ΤΕΛΟΣ
+
+
+	     ΑΛΛΙΩΣ ΕΑΝ (sec == 'B') ΤΟΤΕ
+		ΕΑΝ (owh >= 10) ΤΟΤΕ
+		    ΤΥΠΩΣΕ " Your bonus is 300 euros.";
+		ΑΛΛΙΩΣ ΕΑΝ (owh > 0) ΤΟΤΕ
+		    ΤΥΠΩΣΕ " Your bonus is 200 euros.";
+		ΑΛΛΙΩΣ 
+		    ΤΥΠΩΣΕ " Your bonus is 0 euros.";
+
+		ΕΑΝ-ΤΕΛΟΣ
+
+
+	     ΑΛΛΙΩΣ
+		ΤΥΠΩΣΕ " Your sector is not right, so we cannot calculate your bonus.";
+
+	     ΕΑΝ-ΤΕΛΟΣ
+	ΤΕΛΟΣ
