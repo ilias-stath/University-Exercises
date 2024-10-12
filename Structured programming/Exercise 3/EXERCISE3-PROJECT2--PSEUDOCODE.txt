@@ -1,0 +1,113 @@
+ΑΛΓΟΡΙΘΜΟΣ APPLICATION_DATABASE
+
+ΔΕΔΟΜΕΝΑ
+     i,k,j,g,bonus,th:INTEGER;
+     deg,av,sum,pt,ba:REAL;
+     MAX:REAL;
+     eng:CHARACTER;
+ΑΡΧΗ
+     ΓΙΑ i=1 ΕΩΣ 10
+     ΕΠΑΝΕΛΑΒΕ
+         ΤΥΠΩΣΕ "Candidate ";
+	 ΤΥΠΩΣΕ i;
+
+	 j:=0;
+	 g:=0;
+	 sum:=0;
+
+	 ΓΙΑ k=1 ΕΩΣ 5
+	 ΕΠΑΝΕΛΑΒΕ
+	       ΤΥΠΩΣΕ "Enter your grade for the programming course number .";
+	       ΤΥΠΩΣΕ k;
+	       ΤΥΠΩΣΕ "Your grade must be in the field [0,10].";
+	       ΔΙΑΒΑΣΕ(deg);
+               
+               EAN (deg>=0 && deg<=N) TOTE   
+		     sum:=sum + deg;
+	       ΑΛΛΙΩΣ
+	             ΤΥΠΩΣΕ "Acceptable grades from 0 to 10";
+                     k := k - 1;
+               ΕΑΝ-ΤΕΛΟΣ
+
+          ΓΙΑ-ΤΕΛΟΣ
+               
+          av:=sum/5;
+          ΤΥΠΩΣΕ "Your average for your programming course is:";
+          ΤΥΠΩΣΕ av;
+
+          ΤΥΠΩΣΕ "Enter your grade for your degree. Your degree must be in the field [5,10].";
+          ΔΙΑΒΑΣΕ(pt);
+
+               ΕΠΑΝΕΛΑΒΕ
+		     ΕΑΝ(pt>=5 && pt<=10) ΤΟΤΕ
+			  j:=1;
+		     ΑΛΛΙΩΣ
+			  ΤΥΠΩΣΕ "Acceptable grades from 5 to 10";
+			  ΤΥΠΩΣΕ "Enter your grade again";
+                          ΔΙΑΒΑΣΕ(pt);
+                          j:=0;
+                     ΕΑΝ-ΤΕΛΟΣ
+                ΜΕΧΡΙ(!j)
+                 
+           ΤΥΠΩΣΕ "Enter your  level of knowledge of your English with the CAPITAL letters A,B,C,D.";
+           ΔΙΑΒΑΣΕ(eng);
+
+                ΕΠΑΝΕΛΑΒΕ
+		     ΕΑΝ(eng=='A'|| eng=='B'|| eng=='C'|| eng=='D') ΤΟΤΕ
+			  g:=1;
+		     ΑΛΛΙΩΣ
+			  ΤΥΠΩΣΕ "Acceptable character A,B,C,D";
+			  ΤΥΠΩΣΕ "Enter a character again";
+			  ΔΙΑΒΑΣΕ(eng);
+	                  g:=0;
+                     ΕΑΝ-ΤΕΛΟΣ
+                ΜΕΧΡΙ(!g)
+
+           ΕΑΝ(eng=='A') ΤΟΤΕ 
+                bonus:=3;
+           ΑΛΛΙΩΣ ΕΑΝ (eng=='B') ΤΟΤΕ
+                bonus:=2;
+           ΑΛΛΙΩΣ ΕΑΝ (eng=='C') ΤΟΤΕ
+                bonus:=1;
+           ΑΛΛΙΩΣ
+                bonus:=0;
+           ΕΑΝ-ΤΕΛΟΣ
+                
+           ba:=2*av + pt + bonus;
+           ΤΥΠΩΣΕ "Your total grade is:";
+           ΤΥΠΩΣΕ ba;
+
+           ΕΑΝ(ba>MAX) ΤΟΤΕ
+                ΜΑΧ:=ba;
+                th:=i;
+           ΑΛΛΙΩΣ
+                ΣΥΝΕΧΙΣΕ;
+           ΕΑΝ-ΤΕΛΟΣ
+
+    ΓΙΑ-ΤΕΛΟΣ
+
+    ΤΥΠΩΣΕ "The best application form is  with grade:"; 
+    ΤΥΠΩΣΕ th;
+    ΤΥΠΩΣΕ ΜΑΧ;
+
+ΤΕΛΟΣ           
+
+
+                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

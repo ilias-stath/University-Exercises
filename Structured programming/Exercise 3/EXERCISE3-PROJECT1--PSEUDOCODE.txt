@@ -1,0 +1,81 @@
+ΑΛΓΟΡΙΘΜΟΣ STUDENT_DATABASE
+
+	ΔΕΔΟΜΕΜΑ
+	   st,sub_var,i,j,x1,x2,x3 : INTEGER ;
+	   passindexA,passindexB : INTEGER ;
+	   numa,numb,deg : REAL ;
+	   year : CHARACTER ;
+	   
+	ΑΡΧΗ 
+	   passindexA := 0;
+ 	   passindexB := 0;
+	   ΤΥΠΩΣΕ "Type the number of students.";
+	   ΔΙΑΒΑΣΕ(st);
+
+	   ΓΙΑ i=1 ΕΩΣ st
+	   ΕΠΑΝΕΛΑΒΕ
+		numa := 0;
+		numb := 0;
+		x1 := 0;
+		x2 := 0;
+		x3 := 0;
+
+		ΤΥΠΩΣΕ " Type A if you are a first year student or B if you are a second year student. ";
+		ΔΙΑΒΑΣΕ(year);
+		
+		ΤΥΠΩΣΕ " Type the number of your total courses. ";
+		ΔΙΑΒΑΣΕ(sub_var);
+
+		ΓΙΑ j=1 ΕΩΣ sub_var
+		ΕΠΑΝΕΛΑΒΕ
+		     ΤΥΠΩΣΕ " Type the degree for course number ";
+		     ΤΥΠΩΣΕ j;
+		     ΤΥΠΩΣΕ " Degree must be in the field [0,10]. ";
+		     ΔΙΑΒΑΣΕ(deg);
+		     numa := numa + deg;
+		     ΕΑΝ (deg>=0 && deg<5) ΤΟΤΕ
+			x1 := x1 + 1;
+		     ΑΛΛΙΩΣ ΕΑΝ (deg>=5 && deg <8) ΤΟΤΕ
+			x2 := x2 + 1;
+			numb := numb + deg;
+		     ΑΛΛΙΩΣ 
+			x3 := x3 + 1;
+			numb := numb + deg;
+		     ΕΑΝ-ΤΕΛΟΣ
+		ΓΙΑ-ΤΕΛΟΣ
+
+		ΤΥΠΩΣΕ " The number of courses in which your degree is in the field [0,5) = ";
+		ΤΥΠΩΣΕ x1;
+		ΤΥΠΩΣΕ " The number of courses in which your degree is in the field [5,8) = ";
+		ΤΥΠΩΣΕ x2;
+		ΤΥΠΩΣΕ " The number of courses in which your degree is in the field [5,8) = ";
+		ΤΥΠΩΣΕ x3;
+		ΤΥΠΩΣΕ " Your total average is ";
+		ΤΥΠΩΣΕ numa/sub_var;
+		ΕΑΝ( x2 + x3 == 0) ΤΟΤΕ
+		     ΤΥΠΩΣΕ " You haven't passed any subject with a degree greater or equal than 5 ";
+		ΑΛΛΙΩΣ
+		     ΤΥΠΩΣΕ " Your average for the subjects you passed is ";
+		     ΤΥΠΩΣΕ numb/(x2+x3);
+		ΕΑΝ-ΤΕΛΟΣ
+
+		ΕΑΝ(year == 'A' && numa/sub_var >=8) ΤΟΤΕ
+		     passindexA := passindexA + 1;
+		ΑΛΛΙΩΣ ΕΑΝ(year == 'B' && numa/sub_var >= 8) ΤΟΤΕ
+		     passindexB := passindexB + 1;
+		ΑΛΛΙΩΣ
+		     ΣΥΝΕΧΙΣΕ;
+		ΕΑΝ-ΤΕΛΟΣ
+
+
+	   ΓΙΑ-ΤΕΛΟΣ
+
+	   ΤΥΠΩΣΕ " The First Yeah Students(A) that have an average at or over 8 are ";
+	   ΤΥΠΩΣΕ passindexA;
+	   ΤΥΠΩΣΕ " The Second Year Students(B) that have am average at or over 8 are ";
+	   ΤΥΠΩΣΕ passindexB;
+
+
+	ΤΕΛΟΣ
+
+		     	
