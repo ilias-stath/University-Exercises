@@ -1,0 +1,27 @@
+Name     Lab-Exercise-9---stathakos--2017 ;
+PartNo   00 ;
+Date     10/1/2022 ;
+Revision 01 ;
+Designer Engineer ;
+Company  TEI ;
+Assembly None ;
+Location  ;
+Device   g20v8a ;
+
+/* *************** INPUT PINS *********************/
+PIN  2   =  X                       ; /*                                 */ 
+PIN  3   =  Q2                      ; /*                                 */ 
+PIN  4   =  Q1                      ; /*                                 */ 
+PIN  5   =  Q0                      ; /*                                 */ 
+
+/* *************** OUTPUT PINS *********************/
+PIN  22  =  D2                      ; /*                                 */ 
+PIN  21  =  D1                      ; /*                                 */ 
+PIN  20  =  D0                      ; /*                                 */ 
+PIN  19  =  Z                       ; /*                                 */ 
+
+
+D2 = X & Q1 & Q0 ;
+D1 = (!X & Q2) # (!X & Q0) # (X & Q1 & !Q0) ;
+D0 = (X & !Q1) # (X & !Q0) ;
+Z = !Q2 ;
