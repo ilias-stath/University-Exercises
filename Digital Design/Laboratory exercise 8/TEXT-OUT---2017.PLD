@@ -1,0 +1,33 @@
+Name     TEXT-OUT---2017 ;
+PartNo   00 ;
+Date     20/12/2021 ;
+Revision 01 ;
+Designer Engineer ;
+Company  Uni ;
+Assembly None ;
+Location  ;
+Device   g20v8a;
+
+/* *************** INPUT PINS *********************/
+PIN   2  =    A                     ; /*                                 */ 
+PIN   3  =    B                     ; /*                                 */ 
+PIN   4  =    C                     ; /*                                 */ 
+
+/* *************** OUTPUT PINS *********************/
+PIN  22  =   a                      ; /*                                 */ 
+PIN  21  =   b                      ; /*                                 */ 
+PIN  20  =   c                      ; /*                                 */ 
+PIN  19  =   d                      ; /*                                 */ 
+PIN  18  =   e                      ; /*                                 */ 
+PIN  17  =   f                      ; /*                                 */ 
+PIN  16  =   g                      ; /*                                 */ 
+
+
+a = (!A&!C) # (!B&C);
+b = (!A&B&!C);
+c = (!A&B);
+d = (!A&!B) # (B&!C) # (A&C);
+e = (!B&C) # (B&!C) # (A&B);
+f = (!B&C) # (!A&B) # (B&!C);
+g = (!B&C) # (A&!C);
+

@@ -1,0 +1,26 @@
+Name     STATE-2017 ;
+PartNo   00 ;
+Date     20/12/2021 ;
+Revision 01 ;
+Designer Engineer ;
+Company  Uni ;
+Assembly None ;
+Location  ;
+Device   g20v8a ;
+
+/* *************** INPUT PINS *********************/
+PIN   2   =  X                        ; /*                                 */ 
+PIN   3   =  Q2                       ; /*                                 */ 
+PIN   4   =  Q1                       ; /*                                 */ 
+PIN   5   =  Q0                       ; /*                                 */ 
+
+/* *************** OUTPUT PINS *********************/
+PIN   22  =  D2                       ; /*                                 */ 
+PIN   21  =  D1                       ; /*                                 */ 
+PIN   20  =  D0                       ; /*                                 */ 
+
+
+
+D2 = (!X & Q1 & Q0) # (!X & Q2& !Q1) # (Q2 & Q0) # (X & !Q2 & !Q1 & !Q0) # (X & Q2 & Q1); 
+D1 = (!X & !Q1 & Q0) # (!X & !Q2 & Q1 & !Q0) # (!X & Q2 & Q0) # (X & !Q1 & !Q0) # (X & Q1 & Q0);
+D0 = (!X & !Q2 & !Q0) # (Q2 & !Q1 & !Q0) # (Q2 & Q1 & Q0) # (X & Q1 & !Q0);

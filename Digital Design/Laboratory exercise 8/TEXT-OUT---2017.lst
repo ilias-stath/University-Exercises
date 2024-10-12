@@ -1,0 +1,47 @@
+LISTING FOR LOGIC DESCRIPTION FILE: TEXT-OUT---2017.pld              Page 1
+
+CUPL(WM): Universal Compiler for Programmable Logic
+Version 5.0a Serial# 60008009
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+Created Mon Dec 20 13:07:06 2021
+
+  1:Name     TEXT-OUT---2017 ;
+  2:PartNo   00 ;
+  3:Date     20/12/2021 ;
+  4:Revision 01 ;
+  5:Designer Engineer ;
+  6:Company  Uni ;
+  7:Assembly None ;
+  8:Location  ;
+  9:Device   g20v8a;
+ 10:
+ 11:/* *************** INPUT PINS *********************/
+ 12:PIN   2  =    A                     ; /*                                 */ 
+ 13:PIN   3  =    B                     ; /*                                 */ 
+ 14:PIN   4  =    C                     ; /*                                 */ 
+ 15:
+ 16:/* *************** OUTPUT PINS *********************/
+ 17:PIN  22  =   a                      ; /*                                 */ 
+ 18:PIN  21  =   b                      ; /*                                 */ 
+ 19:PIN  20  =   c                      ; /*                                 */ 
+ 20:PIN  19  =   d                      ; /*                                 */ 
+ 21:PIN  18  =   e                      ; /*                                 */ 
+ 22:PIN  17  =   f                      ; /*                                 */ 
+ 23:PIN  16  =   g                      ; /*                                 */ 
+ 24:
+ 25:
+ 26:a = (!A&!C) # (!B&C);
+ 27:b = (!A&B&!C);
+ 28:c = (!A&B);
+ 29:d = (!A&!B) # (B&!C) # (A&C);
+ 30:e = (!B&C) # (B&!C) # (A&B);
+ 31:f = (!B&C) # (!A&B) # (B&!C);
+ 32:g = (!B&C) # (A&!C);
+ 33:
+ 34:
+ 35:
+
+
+
+Jedec Fuse Checksum       (529b)
+Jedec Transmit Checksum   (181f)

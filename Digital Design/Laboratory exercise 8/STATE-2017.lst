@@ -1,0 +1,39 @@
+LISTING FOR LOGIC DESCRIPTION FILE: STATE-2017.pld                   Page 1
+
+CUPL(WM): Universal Compiler for Programmable Logic
+Version 5.0a Serial# 60008009
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+Created Mon Dec 20 14:19:27 2021
+
+  1:Name     STATE-2017 ;
+  2:PartNo   00 ;
+  3:Date     20/12/2021 ;
+  4:Revision 01 ;
+  5:Designer Engineer ;
+  6:Company  Uni ;
+  7:Assembly None ;
+  8:Location  ;
+  9:Device   g20v8a ;
+ 10:
+ 11:/* *************** INPUT PINS *********************/
+ 12:PIN   2   =  X                        ; /*                                 */ 
+ 13:PIN   3   =  Q2                       ; /*                                 */ 
+ 14:PIN   4   =  Q1                       ; /*                                 */ 
+ 15:PIN   5   =  Q0                       ; /*                                 */ 
+ 16:
+ 17:/* *************** OUTPUT PINS *********************/
+ 18:PIN   22  =  D2                       ; /*                                 */ 
+ 19:PIN   21  =  D1                       ; /*                                 */ 
+ 20:PIN   20  =  D0                       ; /*                                 */ 
+ 21:
+ 22:
+ 23:
+ 24:D2 = (!X & Q1 & Q0) # (!X & Q2& !Q1) # (Q2 & Q0) # (X & !Q2 & !Q1 & !Q0) # (X & Q2 & Q1); 
+ 25:D1 = (!X & !Q1 & Q0) # (!X & !Q2 & Q1 & !Q0) # (!X & Q2 & Q0) # (X & !Q1 & !Q0) # (X & Q1 & Q0);
+ 26:D0 = (!X & !Q2 & !Q0) # (Q2 & !Q1 & !Q0) # (Q2 & Q1 & Q0) # (X & Q1 & !Q0);
+ 27:
+
+
+
+Jedec Fuse Checksum       (4ccd)
+Jedec Transmit Checksum   (ffbe)
