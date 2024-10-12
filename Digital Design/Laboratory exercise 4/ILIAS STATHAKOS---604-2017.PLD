@@ -1,0 +1,32 @@
+Name     Ilias Stathakos---604-2017 ;
+PartNo   00 ;
+Date     15/11/2021 ;
+Revision 01 ;
+Designer Engineer ;
+Company  Uni ;
+Assembly None ;
+Location  ;
+Device   g20v8a ;
+
+/* *************** INPUT PINS *********************/
+PIN 2    =      A                   ; /*                                 */ 
+PIN 3    =      B                   ; /*                                 */ 
+PIN 4    =      C                   ; /*                                 */ 
+PIN 5    =      D                   ; /*                                 */ 
+
+/* *************** OUTPUT PINS *********************/
+PIN 22   =      Fa                  ; /*                                 */ 
+PIN 21   =      Fb                  ; /*                                 */ 
+PIN 20   =      Fc                  ; /*                                 */ 
+PIN 19   =      Fd                  ; /*                                 */ 
+PIN 18   =      Fe                  ; /*                                 */ 
+PIN 16   =      Ff                  ; /*                                 */ 
+PIN 15   =      Fg                  ; /*                                 */ 
+
+
+
+Fa = (!A&!B&!C&D) # (!A&B&!C&!D) # (A&!B&C&D) # (A&B&!C&D);
+
+Fb = (B&C&!D) # (A&B&C) # (A&C&D) # (A&B&!D) # (!A&B&!C&D);
+
+Fc = (A&B&C) # (A&B&!D) # (!A&!B&C&!D);

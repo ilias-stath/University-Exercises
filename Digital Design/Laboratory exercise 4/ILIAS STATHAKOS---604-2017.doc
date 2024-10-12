@@ -1,0 +1,66 @@
+
+*******************************************************************************
+                                     Ilias
+*******************************************************************************
+
+CUPL(WM)        5.0a Serial# 60008009
+Device          g20v8as  Library DLIB-h-40-1
+Created         Mon Nov 15 13:12:45 2021
+Name            Ilias Stathakos---604-2017 
+Partno          00 
+Revision        01 
+Date            15/11/2021 
+Designer        Engineer 
+Company         Uni 
+Assembly        None 
+Location        
+
+===============================================================================
+                            Expanded Product Terms
+===============================================================================
+
+Fa =>
+    !A & !B & !C & D
+  # !A & B & !C & !D
+  # A & !B & C & D
+  # A & B & !C & D
+
+Fb =>
+    B & C & !D
+  # A & B & C
+  # A & C & D
+  # A & B & !D
+  # !A & B & !C & D
+
+Fc =>
+    A & B & C
+  # A & B & !D
+  # !A & !B & C & !D
+
+
+===============================================================================
+                                 Symbol Table
+===============================================================================
+
+Pin Variable                                    Pterms   Max     Min    
+Pol   Name              Ext     Pin     Type     Used   Pterms  Level   
+--- --------            ---     ---     ----    ------  ------  -----   
+
+    A                           2        V        -       -       -     
+    B                           3        V        -       -       -     
+    C                           4        V        -       -       -     
+    D                           5        V        -       -       -     
+    Fa                          22       V        4       8       1     
+    Fb                          21       V        5       8       1     
+    Fc                          20       V        3       8       1     
+    Fd                          19       V        -       -       -     
+    Fe                          18       V        -       -       -     
+    Ff                          16       V        -       -       -     
+    Fg                          15       V        -       -       -     
+
+
+LEGEND    D : default variable         F : field      G : group
+          I : intermediate variable    N : node       M : extended node
+          U : undefined                V : variable   X : extended variable
+          T : function
+

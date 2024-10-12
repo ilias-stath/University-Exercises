@@ -1,0 +1,46 @@
+LISTING FOR LOGIC DESCRIPTION FILE: ILIAS STATHAKOS---604-2017.pld   Page 1
+
+CUPL(WM): Universal Compiler for Programmable Logic
+Version 5.0a Serial# 60008009
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+Created Mon Nov 15 13:12:45 2021
+
+  1:Name     Ilias Stathakos---604-2017 ;
+  2:PartNo   00 ;
+  3:Date     15/11/2021 ;
+  4:Revision 01 ;
+  5:Designer Engineer ;
+  6:Company  Uni ;
+  7:Assembly None ;
+  8:Location  ;
+  9:Device   g20v8a ;
+ 10:
+ 11:/* *************** INPUT PINS *********************/
+ 12:PIN 2    =      A                   ; /*                                 */ 
+ 13:PIN 3    =      B                   ; /*                                 */ 
+ 14:PIN 4    =      C                   ; /*                                 */ 
+ 15:PIN 5    =      D                   ; /*                                 */ 
+ 16:
+ 17:/* *************** OUTPUT PINS *********************/
+ 18:PIN 22   =      Fa                  ; /*                                 */ 
+ 19:PIN 21   =      Fb                  ; /*                                 */ 
+ 20:PIN 20   =      Fc                  ; /*                                 */ 
+ 21:PIN 19   =      Fd                  ; /*                                 */ 
+ 22:PIN 18   =      Fe                  ; /*                                 */ 
+ 23:PIN 16   =      Ff                  ; /*                                 */ 
+ 24:PIN 15   =      Fg                  ; /*                                 */ 
+ 25:
+ 26:
+ 27:
+ 28:Fa = (!A&!B&!C&D) # (!A&B&!C&!D) # (A&!B&C&D) # (A&B&!C&D);
+ 29:
+ 30:Fb = (B&C&!D) # (A&B&C) # (A&C&D) # (A&B&!D) # (!A&B&!C&D);
+ 31:
+ 32:Fc = (A&B&C) # (A&B&!D) # (!A&!B&C&!D);
+ 33:
+ 34:
+
+
+
+Jedec Fuse Checksum       (42eb)
+Jedec Transmit Checksum   (ede8)
