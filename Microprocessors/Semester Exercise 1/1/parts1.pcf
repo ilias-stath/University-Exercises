@@ -1,0 +1,8 @@
+version,0,0,0:0.8.11
+scale,0,0,0:0.700000
+useAlias,0,0,0:0
+Push Buttons,21,533,0:19,20,0,0,0,0,0,0,1,0
+Step Motor,57,39,0:37,38,39,40
+Potentiometers,607,419,0:2,3,4,0,0,68,0,0
+Servo Motor,403,39,0:17
+Servo Motor,617,47,0:16
